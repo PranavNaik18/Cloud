@@ -1,0 +1,23 @@
+Login with your AWS account
+set location Mumbai
+location-mumbai
+search-ec2 -Launch instance
+​-Name- myinstance(Any Name)
+​​Key pair (login)  Info-download
+​​launch instance
+ec2-instances-select the instances-(Running)-select the running instance and click connect
+ec2-connect-instance -----connect
+​terminal will be opened --
+​sudo su
+​cd /
+mkdir test          //File Name
+sudo curl -L -o /etc/yum.repos.d/corretto.repo  
+https://rpm.releases.hashicorp.com/AmazonCorretto/corretto.repo 
+sudo yum install -y java-11-amazon-corretto-devel
+java -version
+touch filename.java
+vim filename.java
+//Type simple Java Program
+Press esc :wq    //Save & Exit from Terminal
+javac filename.java
+java filename
