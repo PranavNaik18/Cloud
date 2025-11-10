@@ -1,0 +1,40 @@
+Azure Setup Guide: Virtual Machine & Global Admin User
+1. Create and Configure a Virtual Machine
+• Create Azure Account and Sign In
+• Navigate to Virtual Machines → Click Create → Virtual Machine
+• Fill in Instance Details:
+• VM Name
+• Availability Zones: Select up to 3 zones
+• Size: Choose from B-Series (e.g., B2ats-v2)
+• Click Review + Create → then Create
+• Download the key pair when prompted
+• Wait for Deployment Initialization and completion
+2. Create a New User with Global Admin Role
+• Go to Home → Microsoft Entra ID
+• Click Add → User → Create New User
+• Fill in Identity Details:
+• User Principal Name
+• Display Name
+• Password (Save this securely)
+• Go to Assignments Tab → Click Add Role
+• Select Global Administrator
+• Click Review + Create → then Create
+3. Assign Role to the User in VM
+• Go to Home → Select your created VM
+• Navigate to Access Control (IAM) → Click Add Role Assignment
+• Choose:
+• Role: Privileged Administrator Roles
+• Click Next
+• Under Members:
+• Select the user you just created (by Display Name)
+• Click Select
+• Under Conditions:
+• Choose Allow user to assign all roles
+• Click Review + Assign
+4. Sign In as the New User
+• Go to Role Assignments → Copy the User Principal Name
+• Open a new tab → Go to Azure Sign-In
+• Use the copied User Principal Name and Password
+• Complete Authentication Setup:
+• Install Microsoft Authenticator on your phone
+• Link it to your account​
